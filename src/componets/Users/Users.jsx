@@ -3,11 +3,16 @@ import User from "../User/User";
 
 const Users = () => {
     const users = useLoaderData();
-    console.log(users);
+
+    const usersContainer = {
+        display: 'grid',
+        'grid-template-columns': 'repeat(3, 1fr)',
+        gap: '10px'
+    }
     return (
         <div>
             <h3>Our Users: {users.length} </h3>
-            <div>
+            <div style={usersContainer}>
                 {
                     users.map(user => <User key={user.id} user={user}></User>)
                 }

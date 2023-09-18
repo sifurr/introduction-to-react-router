@@ -10,7 +10,8 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            {
+                        
+            {                
                 navigation.state === 'loading' ?
                 <p>Loading.....</p> : <Outlet></Outlet>
             }
